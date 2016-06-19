@@ -2,11 +2,10 @@
 
 {{#each model as |cyclist|}}
 
-<p>{{cyclist.name}}</p>
-{{#each cyclist.rides as |cyclist|}}
-<p>{{cyclist.name}}</p>
-{{/each}}
+  <p>{{cyclist.name}}</p>
 
- 
+  {{#each cyclist.rides as |cyclist|}}
+    <p>{{cyclist.name}}</p>
+  {{/each}}
 
 {{/each}}

@@ -1,0 +1,9 @@
+<h2>All Your Rides!!</h2>
+
+<ul>
+  {{#each model as |ride|}}
+    <li>{{ride.name}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}

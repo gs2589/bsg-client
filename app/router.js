@@ -11,6 +11,8 @@ Router.map(function() {
   this.route('cyclists', function() {
     this.route('cyclist', { path: '/:cyclist_id' });
   });
+  this.route('rides');
+  this.route('profile');
 });
 
 export default Router;

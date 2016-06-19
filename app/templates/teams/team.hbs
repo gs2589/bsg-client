@@ -1,0 +1,27 @@
+{{outlet}}
+<h1>{{model.name}}'s Page</h1>
+
+
+
+
+<div><br>
+<h2> Team Members</h2>
+<ul>
+{{#each model.cyclists as |cyclist|}}
+<li>{{#link-to 'cyclists.cyclist' cyclist}}{{cyclist.name}}{{/link-to}}</li>
+{{/each}}
+</ul>
+</div>
+
+<div><br>
+<h2> Team Calendar</h2>
+<ul>
+{{#each model.rides as |ride|}}
+<li>{{#link-to 'rides.ride' ride}}{{ride.name}}{{/link-to}}
+{{ride.date}}
+</li>
+{{/each}}
+</ul>
+</div>
+
+

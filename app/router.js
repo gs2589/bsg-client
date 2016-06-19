@@ -11,8 +11,18 @@ Router.map(function() {
   this.route('cyclists', function() {
     this.route('cyclist', { path: '/:cyclist_id' });
   });
-  this.route('rides');
+  
+  this.route('rides', function() {
+    this.route('ride', { path: '/:ride_id' });
+  });
+
+  
+
   this.route('profile');
+
+  this.route('teams', function() {
+    this.route('team', { path: '/:team_id' });
+  });
 });
 
 export default Router;

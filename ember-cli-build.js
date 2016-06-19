@@ -34,6 +34,7 @@ module.exports = function(defaults) {
   app.import("vendor/js/respond.min.js");
   app.import("vendor/js/html5shiv.js");
   app.import("vendor/js/custom.js");
+  
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

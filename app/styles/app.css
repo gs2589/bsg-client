@@ -3,6 +3,11 @@ div#login {
   text-align: center;
 }
 
+div#signup {
+  margin-top: 200px;
+  text-align: center;
+}
+
 body {
   /*background-image: url(images/bridge-pedal-photo.jpg);*/
   background-repeat: no-repeat;

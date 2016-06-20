@@ -167,20 +167,7 @@
 
 {{else}}
 
-  <div id="login">
-
-    <h1 id="welcome-text"><em>PEDAL</em></h1>
-    <br>
-
-    <form id="login-form" {{action 'authenticate' on='submit'}}> 
-      {{input id='identification' placeholder="Email" value=identification}}
-      <br>
-      {{input id='password' type="password" placeholder="Password" value=password}}
-      <br><br>
-      <button class="btn btn-secondary" type="submit">Login</button>
-    </form>
-
-  </div>
+  {{login-or-register login=(action 'authenticate')}}
 
 {{/if}}
 

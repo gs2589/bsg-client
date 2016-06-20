@@ -2,6 +2,10 @@
 
 <body>
 
+
+{{#if isLoggedIn}}
+
+
     <div class="outer">
       
       <!-- Sidebar starts -->
@@ -22,20 +26,15 @@
           <div class="side-nav">
           
             <div class="side-nav-block">
+
               <!-- Sidebar heading -->
-              <h4>Cyclist_Name_Here</h4>
+              <h4>{{model.name}}</h4>
+              
               <!-- Sidebar links -->
-        
-
-
-
               <ul class="list-unstyled">
                 <li>{{#link-to 'profile'}}<i class="fa fa-desktop"></i> Profile {{/link-to}}</li>
-                <li>{{#link-to 'rides'}}<i class="fa fa-bullseye"></i> All My Rides {{/link-to}}</li>
-                <li>{{#link-to 'teams'}}<i class="fa fa-bullseye"></i> All My Teams {{/link-to}}</li>
-                
-               
-                
+                <li>{{#link-to 'rides'}}<i class="fa fa-bullseye"></i> My Rides {{/link-to}}</li>
+                <li>{{#link-to 'teams'}}<i class="fa fa-bullseye"></i> My Teams {{/link-to}}</li>
               </ul>
             </div>
             
@@ -116,13 +115,13 @@
                     <img src="img/user2.png" alt="" class="img-responsive img-circle"/>
                     
                     <!-- User name -->
-                    ashokram <span class="label label-danger">5</span> 
+                    {{model.name}} <span class="label label-danger">5</span> 
                     <i class="fa fa-caret-down"></i> 
                   </a>
                   <!-- Dropdown -->
                   <ul class="dropdown-menu" aria-labelledby="profile">
                       <li><a href="#">View/Edit Profile <span class="badge badge-info pull-right">6</span></a></li>
-                    <li><a href="#">Change Settings</a></li>
+                    <li><a href="#">View Rides</a></li>
                     <li><a href="#">Messages <span class="badge badge-danger pull-right">5</span></a></li>
                     <li><a href="#" {{action 'invalidateSession'}}>Logout</a></li> 
                   </ul>
@@ -148,10 +147,10 @@
 
 
               </div>
-                {{outlet}}
 
-
-
+              <!-- MAIN APP FUNCTIONALITY INSERTED HERE -->
+                              {{outlet}}
+              <!-- MAIN APP FUNCTIONALITY INSERTED HERE -->
               
             </div>
             
@@ -164,5 +163,22 @@
       <div class="clearfix"></div>
 
     </div>
+
+
+{{else}}
+
+  <h1>HELLO!</h1>
+
+  <h3>Log In Here</h3>
+
+  <form {{action 'authenticate' on='submit'}}>  
+    <label for="identification">Email</label>
+    {{input id='identification' value=identification}}
+    <label for="password">Password</label>
+    {{input id='password' value=password}}
+    <button type="submit">Login</button>
+  </form>
+
+{{/if}}
 
 </body>

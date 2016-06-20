@@ -11,7 +11,7 @@ export default Base.extend({
       block('Authorization', 'Bearer beyonce');
     }
 
-    const { token } = data
+    const { token } = data;
 
     if (this.get('session.isAuthenticated') && token) {
       block('Authorization', `Bearer ${token}`);

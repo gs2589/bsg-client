@@ -25,6 +25,7 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
       .then(()=>{
         let currentCyclist = this.store.queryRecordPath('cyclist', 'current');
         this.controller.set('model', currentCyclist);
+        this.transitionTo('profile');
       })
       .catch((reason)=>{
         this.set('errorMessage', reason.error || reason);

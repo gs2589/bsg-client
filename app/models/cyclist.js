@@ -7,7 +7,11 @@ export default Model.extend({
   name: attr('string'),
   email: attr('string'),
   teams: hasMany('team'),
-  rides: hasMany('ride')
+  rides: hasMany('ride'),
+
+  // this is just for sending registration data
+  password: attr('string'),
+  password_confirmation: attr('string')
  
 });
   

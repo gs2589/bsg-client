@@ -1,4 +1,31 @@
-<div id="login">
+{{#if isSigningUp}}
+
+  <div id="signup">
+
+    <h1 id="welcome-text"><em>SIGN UP</em></h1>
+    <br>
+
+    <form id="signup-form" {{action 'submitSignupForm' on='submit'}}>
+      {{input id='name' placeholder="What's your name?" value=name}}
+      <br>
+      {{input id='email' placeholder="What's your email?" value=email}}
+      <br>
+      {{input id='password' type='password' placeholder="What's your password?" value=password}}
+      <br>
+      {{input id='password_confirmation' type='password' placeholder="Your password again." value=password_confirmation}}
+      <br><br>
+      <button class="btn btn-secondary" type="submit">Sign Up</button>
+    </form>
+    <br>
+    <p>~<em>or</em>~</p>
+    <br>
+    <button {{action 'toggleSignupForm'}} class="btn btn-secondary">Log In</button>
+
+  </div>
+
+{{else}}
+
+  <div id="login">
 
     <h1 id="welcome-text"><em>PEDAL</em></h1>
     <br>
@@ -8,9 +35,15 @@
       <br>
       {{input id='password' type="password" placeholder="Password" value=password}}
       <br><br>
-      <button class="btn btn-secondary" type="submit">Login</button>
+      <button class="btn btn-secondary" type="submit">Log In</button>
     </form>
+    <br>
+    <p>~<em>or</em>~</p>
+    <br>
+    <button {{action 'toggleSignupForm'}} class="btn btn-secondary">Sign Up</button>
 
   </div>
+
+{{/if}}
 
 {{yield}}

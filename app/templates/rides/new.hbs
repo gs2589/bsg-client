@@ -1,0 +1,17 @@
+<form class="form-horizontal">
+  <label for="name">Name</label>
+    {{input value=model.name id="name"}}
+  
+  <label for="date" class="control-label">Date</label>
+    {{input value=model.date id="date"}}
+  
+  <label for="route" class="control-label">Route</label>
+    {{input value=model.route id="route"}}
+
+  
+  <label for="cyclists" class="control-label">Invite Cyclists</label>
+    {{input value=model.cyclists id="cyclists"}}
+
+  
+  <button {{action 'save'}}  class="btn btn-primary" id="submit">Save</button>
+</form>

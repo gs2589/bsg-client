@@ -14,6 +14,7 @@ Router.map(function() {
   
   this.route('rides', function() {
     this.route('ride', { path: '/:ride_id' });
+    this.route('new', { path: '/new'});
   });
 
   

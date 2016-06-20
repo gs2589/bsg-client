@@ -1,0 +1,10 @@
+div#login {
+  margin-top: 200px;
+  text-align: center;
+}
+
+body {
+  /*background-image: url(images/bridge-pedal-photo.jpg);*/
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

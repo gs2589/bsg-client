@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(){
-    return this.store.findAll('cyclist')
+    let currentCyclist = this.store.queryRecordPath('cyclist', 'current');
+    return currentCyclist;
   }
 });

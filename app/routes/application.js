@@ -9,9 +9,9 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
   
 
   actions: {
-      invalidateSession: function() {
-         this.get('session').invalidate();
-      }
+    invalidateSession: function() {
+       this.get('session').invalidate();
+    }
   }
 
 });

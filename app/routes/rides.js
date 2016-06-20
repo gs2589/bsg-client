@@ -4,7 +4,8 @@ export default Ember.Route.extend({
   session: Ember.inject.service(),
   model(){
 
-    return this.modelFor('application');
+    let currentCyclist = this.store.queryRecordPath('cyclist', 'current');
+    return currentCyclist;
     // return this.store.findAll('ride').then((rides) =>{
     //   let id = this.get('session.data.authenticated.id')
     //   id = String(id)

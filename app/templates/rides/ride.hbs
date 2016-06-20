@@ -1,0 +1,22 @@
+{{outlet}}
+<h1>Ride: {{model.name}}</h1>
+
+
+
+
+
+<div><ul>
+<li>Date: {{model.date}} </li>
+<li>Route: {{model.route}} </li>
+</ul>
+</div>
+
+<div><br>
+<h2> Who's Signed-Up</h2>
+<ul>
+{{#each model.cyclists as |cyclist|}}
+<li>{{#link-to 'cyclists.cyclist' cyclist}}{{cyclist.name}}{{/link-to}}</li>
+{{/each}}
+</ul>
+</div>
+

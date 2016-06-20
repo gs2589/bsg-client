@@ -1,0 +1,11 @@
+{{outlet}}
+
+{{#each model as |team|}}
+
+<ul>
+<li>{{#link-to 'teams.team' team}}<h4>{{team.name}}</h4>{{/link-to}}</li>
+</ul>  
+
+{{/each}}
+  
+

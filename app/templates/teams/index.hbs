@@ -1,6 +1,6 @@
 {{outlet}}
 
-{{#each model as |team|}}
+{{#each model.teams as |team|}}
 
 <ul>
 <li>{{#link-to 'teams.team' team}}<h4>{{team.name}}</h4>{{/link-to}}</li>

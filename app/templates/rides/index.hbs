@@ -1,7 +1,7 @@
 <h2>All Your Rides!!</h2>
 
 <ul>
-  {{#each model as |ride|}}
+  {{#each model.rides as |ride|}}
     <li>{{#link-to 'rides.ride' ride}}{{ride.name}}{{/link-to}}
 {{ride.date}}</li>
   {{/each}}

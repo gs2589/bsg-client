@@ -1,9 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  isLoggedIn: isAuthInfoInLocalStorage(),
 
   session: Ember.inject.service(),
+
+  isLoggedIn: isAuthInfoInLocalStorage(),
 
   actions: {
     authenticate: function(authenticator, credentials) {

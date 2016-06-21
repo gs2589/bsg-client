@@ -15,7 +15,8 @@ export default Ember.Controller.extend({
     save(){
       
       let ride = this.get('model');
-      ride.set("team", this.get("selectedTeams").get('firstObject'));
+      
+      ride.set("team", this.get("selectedTeams"));
       ride.save().then(()=>{
         this.transitionToRoute('rides.ride', ride);
       })

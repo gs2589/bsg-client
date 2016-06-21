@@ -10,14 +10,22 @@
   <br>
   <label>Team:</label>
   <p>Select the team that you'd like to add this ride to:</p>
-  {{multiselect-checkboxes 
+  <!-- {{multiselect-checkboxes 
     options=rideCreator.teams
     selection=selectedTeams
-    labelProperty="name"}}
-
-
+    labelProperty="name"}} -->
+<div>
+{{#each rideCreator.teams as |team|}}
+{{radio-button value=team checked=selectedTeams}}<span> </span><strong>{{team.name}}</strong>
+<br>
+{{/each}}
+</div>
 
   <button {{action "save"}}>Save</button>
+
+
+
+
 
 
 

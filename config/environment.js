@@ -46,7 +46,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.host='http://pedal-api.herokuapp.com'
   }
 
   return ENV;

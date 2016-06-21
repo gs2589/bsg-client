@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
       .then(()=>{
         let currentCyclist = this.store.queryRecordPath('cyclist', 'current');
         this.set('model', currentCyclist);
-        this.toggleProperty('isLoggedIn');
+        this.set('isLoggedIn', this.get('session.isAuthenticated'));
         this.transitionToRoute('profile');
       })
       .catch((reason)=>{
@@ -32,7 +32,7 @@ export default Ember.Controller.extend({
         .then(()=>{
           let currentCyclist = this.store.queryRecordPath('cyclist', 'current');
           this.set('model', currentCyclist);
-          this.toggleProperty('isLoggedIn');
+          this.set('isLoggedIn', this.get('session.isAuthenticated'));
           this.transitionToRoute('profile');
         })
         .catch((reason)=>{

@@ -11,7 +11,7 @@ export default Ember.Component.extend({
     submitSignupForm() {
       let signUpParams = this.controller.getProperties('name', 'email', 'password', 'password_confirmation');
       if (signUpParams.password !== signUpParams.password_confirmation) {
-        alert("Password and password confirmation don't match!")
+        alert("Password and password confirmation don't match!");
       } else {
         this.attrs.signup(signUpParams);
       }

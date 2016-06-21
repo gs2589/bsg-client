@@ -3,10 +3,13 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   rideCreator: Ember.computed(function(){
-    return this.store.queryRecordPath('cyclist', 'current');
+    return this.store.queryRecordPath('cyclist', 'current')
   }),
 
   selectedTeams:[],
+  // allCyclists: Ember.computed(function(){
+  //   this.store.findAll('cycl')
+  // })
 
   actions: {
     save(){
